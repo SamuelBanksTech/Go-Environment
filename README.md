@@ -6,4 +6,4 @@ Optionally allows any key within the environment file to be overridden by actual
 
 #### Usage
 
-`go get `
+`go get github.com/SamuelBanksTech/env`
