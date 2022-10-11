@@ -39,5 +39,14 @@ func main() {
 		log.Fatalln(err)
 	}
 	
+	fmt.Println(env.Get("FOO"))
+	
 }
+```
+#### Example .env
+
+```dotenv
+FOO=bar
+BAR=donk
+#IGNOREDVAR=foobar
 ```
