@@ -22,9 +22,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-
-	"github.com/SamuelBanksTech/env"
-	"github.com/jackc/pgx/v4"
+	"github.com/SamuelBanksTech/Go-Environment"
 )
 
 func main() {
