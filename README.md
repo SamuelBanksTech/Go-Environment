@@ -11,7 +11,7 @@ Using `env.Get("XXX")` can completly replace `os.Getenv("XXX")` if there is no v
 
 #### Usage
 
-`go get github.com/SamuelBanksTech/env`
+`go get github.com/SamuelBanksTech/Go-Environment`
 
 
 #### Basic Example
