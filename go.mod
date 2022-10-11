@@ -1,4 +1,4 @@
-module github.com/SamuelBanksTech/env
+module github.com/SamuelBanksTech/Go-Environment
 
 
 

@@ -1,3 +1,16 @@
+// Copyright 2022 SamuelBanksTech. All rights reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 package env
 
 import (
@@ -12,7 +25,7 @@ var keys = make(map[string]string)
 
 // Environment struct
 type Environment struct {
-	// EnvPath is the path to your environment varible file, usually .env in the root but can be whatever you like
+	// EnvPath is the path to your environment variable file, usually .env in the root but can be whatever you like
 	EnvPath string
 	// EnableOsEnvOverride allows any matching os level environment variables to override any contained in the environment file
 	EnableOsEnvOverride bool
@@ -91,7 +104,11 @@ func (e *Environment) LoadEnv() error {
 	return nil
 }
 
-// Get simply returns the matching key value
+// Get simply returns the matching key value or falling back to os env
 func Get(key string) string {
-	return keys[key]
+	if keyVar, ok := keys[key]; ok {
+		return keyVar
+	}
+
+	return os.Getenv(key)
 }
