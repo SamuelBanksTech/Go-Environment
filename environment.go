@@ -70,7 +70,7 @@ func (e *Environment) LoadEnv() error {
 	scanner := bufio.NewScanner(file)
 
 	for scanner.Scan() {
-		line := scanner.Text()
+		line := strings.TrimSpace(scanner.Text())
 
 		if line != "" && string(line[0]) != "#" {
 			envVar := strings.SplitN(line, "=", 2)

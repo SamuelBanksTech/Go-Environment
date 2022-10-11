@@ -19,9 +19,8 @@ Using `env.Get("XXX")` can completly replace `os.Getenv("XXX")` if there is no v
 package main
 
 import (
-	"context"
 	"fmt"
-	"os"
+    "log"
 	"github.com/SamuelBanksTech/Go-Environment"
 )
 
